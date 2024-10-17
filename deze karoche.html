@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setter</title>
+</head>
+
+<body>
+    <script>
+        class triugolnik {
+            constructor(first, second, third) {
+                this._first = first;
+                this._second = second;
+                this._third = third;
+            }
+
+            get first() {
+                if (this._first === undefined) {
+                    this._first = 0;
+                }
+
+                return this._first;
+            }
+
+            set first(value) {
+                if (value < 0) {
+                    alert("Значение для first не может быть меньше 0");
+                } else {
+                    this._first = value;
+                }
+            }
+
+
+
+            get second() {
+                if (this._second === undefined) {
+                    this._second = 0;
+                }
+
+                return this._second;
+            }
+
+            set second(value) {
+                if (value < 0) {
+                    alert("Значение для second не может быть меньше 0");
+                } else {
+                    this._second = value;
+                }
+            }
+
+
+
+
+            get third() {
+                if (this._third === undefined) {
+                    this._third = 0;
+                }
+
+                return this._third;
+            }
+
+            set third(value) {
+                if (value < 0) {
+                    alert("Значение для third не может быть меньше 0");
+                } else {
+                    this._third = value;
+                }
+            }
+
+
+            get area() {
+                return this.first * this.second* this.third; // использование getter
+            }
+            Perimeter()
+            {
+                return (this.first + this.second + this.third)*2;
+            }
+            
+        }
+
+        let r1 = triugolnik(10, 20);
+
+        r1.first = 10;  
+        r1.second = 12; 
+        r1.third = 13;
+        
+        console.log("first" + r1.first);
+        console.log("second" + r1.second);
+        console.log("third" + r1.third);
+        console.log("Ploschyad" + r1.area);
+        console.log("Perimeter" + r1.Perimeter);
+
+    </script>
+</body>
+
+</html>
